@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use app\Http\Controllers\MesaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +14,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*
-Route::get('/', function () {
-    return view('welcome');
+Route::redirect('/', '/home');
+
+Route::get('/home', function(){
+    return view('home');
+});   
+
+Route::get('/fichas', function(){
+    return view('fichas', ['nome' => 'teste']);
 });
-*/
-Route::get('/', function() {
+
+Route::get('/welcome', function(){
+    return view('welcome');
+});   
+
+Route::get('/teste', function() {
     return view('teste', ['teste' => 'olá']);
 });
+
+Route::get('/minhaficha', function() {
+    return view('minhaFicha');
+});
+

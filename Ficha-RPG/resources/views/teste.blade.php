@@ -13,6 +13,9 @@
            <br> 'A' é igual a {{$a}}
         @endfor
 
+        @include('welcome')
+
+        {{-- para acessar a pasta 'public' usar asset('') que será retornado a url do diretório ou arquivo --}}
     <script>
         
     </script>
